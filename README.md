@@ -1,6 +1,6 @@
 # HTB-Writeup-CrossSiteScripting
 
-HackTheBox Writeup: Cross-Site Scripting (XSS) – Exploited blind XSS to execute payloads in privileged contexts, highlighting risks of inadequate input validation and advocating CSP, sanitization, and secure cookies.
+Exploited XSS to deploy payloads within privileged execution contexts, revealing input validation vulnerabilities and advocating CSP enforcement, output sanitization, and secure cookie implementation.
 
 By Ramyar Daneshgar
 
