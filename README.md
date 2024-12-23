@@ -10,14 +10,6 @@ The goal of this assessment was to identify and exploit vulnerabilities in a web
 
 ---
 
-## Target Information
-
-- **Target URL**: `http://SERVER_IP:PORT/assessment/`
-- **Vulnerability Type**: Blind Cross-Site Scripting (XSS)
-- **Scope**: Identify vulnerable input fields, inject malicious JavaScript, and extract the `flag` cookie using session hijacking techniques.
-- **Environment**: The `/assessment` page included a comment submission form that stored user inputs for admin review. This hinted at the possibility of stored or blind XSS vulnerabilities.
-
----
 
 ## Tools and Setup
 
@@ -41,9 +33,6 @@ I accessed the `/assessment` page and identified a blog-like structure with a co
 4. **Comment**
 
 The note "comments must be approved by an admin" suggested that inputs submitted via the form would be processed or rendered in the admin's browser, making this an ideal scenario for blind XSS exploitation.
-
-#### Hypothesis
-Stored or blind XSS could be exploited if the application does not properly sanitize and encode user inputs before rendering them. Since blind XSS executes in a privileged context (e.g., an admin's browser), it can be used to hijack sessions or steal sensitive information.
 
 #### Payload Testing
 I tested each input field by submitting the following basic XSS payload:
@@ -188,8 +177,6 @@ The `flag` cookie was accessible via JavaScript, as it lacked the `HttpOnly` att
 
 ---
 
-## Conclusion
+## Conclusion  
 
-This assessment underscores the serious risks posed by blind Cross-Site Scripting (XSS) vulnerabilities, particularly when targeting privileged users. By exploiting flawed input handling, I executed payloads in a high-privilege context, revealing how these vulnerabilities can lead to unauthorized data exposure and application compromise. Through a structured exploitation process—crafting payloads, hosting malicious servers, and analyzing browser behavior—I demonstrated the escalation potential of such attacks.
-
-The findings emphasize the importance of implementing strict input validation, robust content security policies, and secure cookie attributes. Regular security testing and a defense-in-depth strategy are critical to reducing the attack surface and mitigating risks associated with XSS and other web vulnerabilities.
+The findings from this lab highlighted the importance of mplementing strict input validation, content security policies, and secure cookie attributes. Regular security testing and a defense-in-depth strategy are critical to reducing the attack surface and mitigating risks associated with Cross Site Scripting vulnerabilties. 
