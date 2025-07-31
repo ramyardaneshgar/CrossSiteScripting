@@ -1,6 +1,6 @@
-# HTB-Writeup-CrossSiteScripting
+# CrossSiteScripting
 
-HackTheBox Writeup: Cross Site Scripting :   Deployed payloads in privileged contexts, exposing input validation flaws and advocating CSP, sanitization, and secure cookies implementation.
+Cross Site Scripting :   Deployed payloads in privileged contexts, exposing input validation flaws and advocating CSP, sanitization, and secure cookies implementation.
 
 By Ramyar Daneshgar
 
